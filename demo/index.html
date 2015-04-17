@@ -1,0 +1,17 @@
+<h1>Hello I am Rhyme Bot.</h2>
+<h2>I live to rhyme.</h3>
+<h3>All the time.</h3>
+<input id="word"><button id="rhyme">Rhyme!</button>
+<ul id="output">
+</ul>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="../build/pronouncing-browser.js"></script>
+<script>
+	$("#rhyme").click(function() {
+		$("#output").empty();
+		var rhymes = pronouncing.rhymes($("#word").val());
+		$.each(rhymes, function(i, item) {
+			$("#output").append("<li>" + item + "</li>");
+		});
+	});
+</script>

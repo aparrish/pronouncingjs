@@ -1,0 +1,19 @@
+{
+  "name": "pronouncing",
+  "version": "0.0.1",
+  "description": "a simple interface to the CMU pronouncing dictionary",
+  "author": "Allison Parrish <allison@decontextualize.com>",
+  "scripts": {
+    "build": "browserify -t brfs pronouncing.js --standalone pronouncing >build/pronouncing-browser.js"
+  },
+  "main": "pronouncing.js",
+  "dependencies": {
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "brfs": "1.4.0",
+    "browserify": "9.0.8"
+  },
+  "license": "MIT",
+  "private": true
+}
