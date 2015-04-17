@@ -8,7 +8,7 @@ This module is a work in progress (obviously).
 Installation
 ------------
 
-	$ npm install aparrish/pronouncing
+	$ npm install aparrish/pronouncingjs
 
 Or if you're using the browserified version, download `pronouncing-browser.js`
 from the `build` directory and include it using a `<script>` tag:
