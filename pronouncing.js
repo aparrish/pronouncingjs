@@ -62,6 +62,19 @@ function search(pattern) {
 	return matches;
 }
 
+function searchStresses(pattern) {
+    var matches = [];
+    var re = new RegExp("\\b" + pattern + "\\b");
+    _.each(pronunciations, function(item) {
+        var word = item[0];
+        var phones = item[1];
+        if (stresses(phones).match(re)) {
+            matches.push(word);
+        }
+    });
+    return matches;
+}
+
 function rhymes(word) {
 	var allRhymes = [];
 	var allPhones = phonesForWord(word);
@@ -73,11 +86,18 @@ function rhymes(word) {
 	return _.filter(allRhymes, function(r) { return r != word; });
 }
 
+function stresses(s) {
+    return s.replace(/[^012]/g, "");
+}
+
+
 module.exports = {
 	syllableCount: syllableCount,
 	phonesForWord: phonesForWord,
 	rhymingPart: rhymingPart,
 	search: search,
-	rhymes: rhymes
+	rhymes: rhymes,
+    stresses: stresses,
+    searchStresses: searchStresses
 };
 

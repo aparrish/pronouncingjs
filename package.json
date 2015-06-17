@@ -8,9 +8,10 @@
   },
   "main": "pronouncing.js",
   "dependencies": {
-    "underscore": "1.8.3"
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "tape": "^4.0.0",
     "brfs": "1.4.0",
     "browserify": "9.0.8"
   },
