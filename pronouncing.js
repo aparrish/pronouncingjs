@@ -49,9 +49,20 @@ function rhymingPart(phones) {
 	return phonesList.slice(idx).join(' ');
 }
 
+/** 
+ * If you give this function a string, it turns it into a RegExp object with
+ * added word boundary anchors at beginning and end. You can also pass a
+ * RegExp object, but in that case you need to add the word boundary anchors
+ * yourself!
+ */
 function search(pattern) {
 	var matches = [];
-	var re = new RegExp("\\b" + pattern + "\\b");
+    if (pattern instanceof RegExp) {
+        re = pattern;
+    }
+    else {
+	    var re = new RegExp("\\b" + pattern + "\\b");
+    }
 	_.each(pronunciations, function(item) {
 		var word = item[0];
 		var phones = item[1];
@@ -92,6 +103,7 @@ function stresses(s) {
 
 
 module.exports = {
+    parseCMU: parseCMU,
 	syllableCount: syllableCount,
 	phonesForWord: phonesForWord,
 	rhymingPart: rhymingPart,
