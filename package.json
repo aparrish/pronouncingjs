@@ -4,7 +4,8 @@
   "description": "a simple interface to the CMU pronouncing dictionary",
   "author": "Allison Parrish <allison@decontextualize.com>",
   "scripts": {
-    "build": "browserify -t brfs pronouncing.js --standalone pronouncing >build/pronouncing-browser.js"
+    "build": "browserify -t brfs pronouncing.js --standalone pronouncing >build/pronouncing-browser.js",
+    "test": "node tests/test_pronouncing.js"
   },
   "main": "pronouncing.js",
   "dependencies": {

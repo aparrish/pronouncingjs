@@ -1,6 +1,6 @@
 "use strict";
 var test = require('tape');
-var pronouncing = require('pronouncing');
+var pronouncing = require('../pronouncing.js');
 var _ = require('underscore');
 
 test('parse cmu dictionary', function(t) {
