@@ -28,7 +28,7 @@ the Python module also work in Javascript, though the functions in
 
 Use the module in Node like so:
 
-	> var pronouncing = require('./pronouncing.js');
+	> var pronouncing = require('pronouncing');
 	undefined
 	> pronouncing.phonesForWord("adverse")
 	[ 'AE0 D V ER1 S', 'AE1 D V ER2 S', 'AE2 D V ER1 S' ]
